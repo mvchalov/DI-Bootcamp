@@ -1,0 +1,46 @@
+h2 {
+    border-bottom: 1px solid #000;
+}
+
+h3:last-of-type {
+    text-align: center;
+}
+
+img {
+    border: 1em solid #f00;
+    display: block;
+    margin: 3em auto;
+    width: auto;
+    max-width: 90%;
+}
+
+h4,
+ul {
+    margin-left: 3em;
+}
+
+h5 {
+    color: #f00;
+    border: .25em solid #f00;
+    text-align: center;
+    padding: .5em 0;
+    max-width: 920px;
+    margin: 0 auto 1em;
+}
+
+ol {
+    list-style-type: upper-roman;
+}
+
+span {
+    background: #ff0;
+}
+
+table {
+    max-width: 928px;
+    margin: 0 auto 1em;
+}
+
+td, th {
+    border: 1px solid #000
+}
