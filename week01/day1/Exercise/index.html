@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>An introduction</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=family=Rubik:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            transition: all .3s ease;
+        }
+        body {
+            font: 16px 'Rubik', sans-serif;
+            padding: 2em;
+        }
+        a:hover {
+            opacity: .7;
+        }
+        h1, h2, span {
+            color: darkblue;
+        }
+        h1 + p {
+            font-size: .85em;
+            color: #777;
+            margin-top: .25em;
+        }
+        h2 {
+            margin: 1em 0;
+        }
+        p,
+        ul,
+        li {
+            margin-top: 1em;
+        }
+        ul,
+        li {
+            margin-left: 1em;
+        }
+        img {
+            width: 32px;
+            margin-right: 5px;
+        }
+        .holder {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+        p:has(a) {
+            margin-top: 2em;
+        }
+        hr {
+            margin: 2em 0
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            padding: .5em 1em;
+        }
+        th {
+            background: #f4f4f4;
+            color: darkblue;
+            text-align: left;
+        }
+        td {
+            border: 1px solid #f4f4f4
+        }
+        .exercises {
+            background-color: #C0F7D7;
+            border: ridge #27C76B;
+            color: #29303b;
+            line-height: 135%;
+            padding: 30px;
+        }
+        .example1 p:first-of-type {
+            margin-top: 0;
+        }
+        .flag div {
+            display: inline-block;
+            width: 30px;
+            height: 50px;
+            background-color: #00f;
+        }
+        .flag div:nth-last-of-type(2) {
+            background-color: #fff;
+        }
+        .flag div:last-of-type {
+            background-color: #f00;
+        }
+        .example2 > div:first-of-type li {
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .example2 > div:first-of-type li:nth-of-type(2) {
+            color: #00f;
+        }
+        .example2 > div:last-of-type > p:first-of-type {
+            background: hotpink;
+            color: #fff;
+        }
+        .example2 > div:last-of-type > p:last-of-type {
+            background: lightblue;
+            padding: 1em;
+            margin: .5em 0;
+        }
+        .example2_1,
+        .example2_1b,
+        .example2_1c,
+        .example2_1d {
+            border: 10px solid #e2e2e2;
+            background: #d5d5d5;
+            height: 120px;
+        }
+        .example2_1 > div {
+            background: #64c8fe;
+            height: 100px;
+            width: 100px;
+        }
+        .example2_1 > div:last-of-type {
+            background: #ff9500;
+            margin: -90px 0 0 10px;
+        }
+        .example2_1b > div {
+            background: #64c8fe;
+            height: 100px;
+            width: 100px;
+        }
+        .example2_1b > div::after,
+        .example2_1c::after {
+            content: "";
+            display: inline-block;
+            height: 100px;
+            width: 100px;
+            background: #ff9500;
+            margin: 10px;
+        }
+        .example2_1c::before {
+            content: "";
+            display: inline-block;
+            height: 100px;
+            width: 100px;
+            background: #64c8fe;
+        }
+        .example2_1c::before {
+
+        }
+        .example2_1c::after {
+            margin: 10px 0 0 -90px;
+            position: absolute;
+        }
+        .example2_1d {
+            position: relative;
+        }
+        .example2_1d > div {
+            display: block;
+            height: 100px;
+            width: 100px;
+            background: #64c8fe;
+        }
+        .example2_1d > div:last-of-type {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: #ff9500;
+        }
+    </style>
+</head>
+<body>
+    <div class="holder">
+        <h1>Maksim Chalov</h1>
+        <p>My birthday is November, 9th.</p>
+        <p>I decided to learn to code because I'm passionate about it, and it has a lot of benefits:</p>
+        <ul>
+            <li><span>JavaScript</span> is a highly versatile language that can be used for both front-end and back-end development. It can be used to create web applications, server-side applications, and desktop applications.</li>
+            <li>With <span>JavaScript</span>, you can create highly interactive user interfaces that can respond to user input and provide a more engaging user experience. You can use it to create animations, handle user events, and update the content of a web page dynamically.</li>
+            <li><span>JavaScript</span> is a relatively easy language to learn, especially for those who have prior programming experience. It has a straightforward syntax, and there are plenty of resources and tutorials available to help beginners get started.</li>
+            <li><span>JavaScript</span> has a massive community of developers who are constantly creating new libraries, frameworks, and tools to make development easier and more efficient. This means that there are plenty of resources available to help you solve problems and get the most out of the language.</li>
+            <li>With the growing demand for web and mobile applications, there is a high demand for skilled <span>JavaScript</span> developers. This means that there are plenty of job opportunities available for those who have expertise in the language, and the demand is only expected to increase in the coming years.</li>
+        </ul>
+        <h2>My plan for the next months:</h2>
+        <ol>
+            <li>🔧 To improve my skills in coding.</li>
+            <li>🥷 To create some projects.</li>
+            <li>🔥 To find a perfect job.</li>
+        </ol>
+        <p>
+            <a href="https://linkedin.com/in/mvchalov"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="mvchalov"></a>
+            <a href="https://fb.com/mvchalov"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="mvchalov"></a>
+            <a href="https://instagram.com/mvchalov"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="mvchalov" height="30"></a>
+        </p>
+        <hr>
+        <table>
+            <thead>
+                <th>My future projects</th>
+                <th>My best skills</th>
+                <th>My hobbies</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Project 1</td>
+                    <td>Critical thinking</td>
+                    <td>Traveling or exploring new places</td>
+                </tr>
+                <tr>
+                    <td>Project 2</td>
+                    <td>Creativity</td>
+                    <td>Painting, drawing, or sketching</td>
+                </tr>
+                <tr>
+                    <td>Project 3</td>
+                    <td>Resilience</td>
+                    <td>Reading books</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr>
+        <div class="exercises example1">
+            <p>Create a stuctured HTML file </p>
+            <p>Copy this paragraph and style it with Inline CSS first and then with a CSS stylesheet.</p><p><i><u>Hello Everyone, Congratulation on your first day of coding at DevelopersInstitute </u></i></p>
+            <p> What happens if you style this paragraph both with Inline CSS and with a CSS stylesheet ?</p>
+        </div>
+        <hr>
+        <div class="exercises flag">
+            <div></div><div></div><div></div>
+        </div>
+        <hr>
+        <div class="example2">
+            <div>
+                <ul>
+                    <li>What is Lorem Ipsum?</li>
+                    <li>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </li>
+                    <li>when an unknown printer took a galley of type and scrambled it to make a type specimen book. </li>
+                </ul>
+            </div>
+            <div>
+                <p>It has survived not only five centuries, but also the leap into electronic typesetting,</p>
+                <ol>
+                    <li> remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets </li>
+                </ol>
+                <p> containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+        </div>
+        <hr>
+        <div class="example2_1">
+            <div></div><div></div>
+        </div>
+        <hr>
+        <div class="example2_1b">
+            <div></div>
+        </div>
+        <hr>
+        <div class="example2_1c"></div>
+        <hr>
+        <div class="example2_1d">
+            <div></div><div></div>
+        </div>
+    </div>
+</body>
+</html>
