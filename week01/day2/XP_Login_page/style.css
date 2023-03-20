@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -11,6 +13,98 @@ a {
 body {
   background: #fafafa;
   color: #1c212a;
+  font: 18px 'Montserrat', sans-serif;
+}
+
+h1, h2 {
+  font-size: 3em;
+  margin: .5em 0 .25em;
+}
+
+button,
+input:not([type="radio"]) {
+  border: none;
+  border-radius: .5em;
+  padding: .75em 2%;
+}
+
+button {
+  background: #aa00b6;
+  color: #fff;
+  margin: 3em 0;
+  width: 100%;
+  animation: buttonDecor 5s infinite;
+}
+
+button:hover {
+  text-shadow: 0 0 10px #3F2166;
+}
+
+input,
+label,
+button,
+form a {
+  font: .9em 'Montserrat', sans-serif;
+}
+
+input[type="text"]:focus {
+  outline: 2px ridge #6B4F9C;
+}
+
+input:not([type="radio"]) {
+  background: #eee;
+  display: block;
+  margin-bottom: 1em;
+  width: 96%;
+}
+
+label input {
+  display: inline-block;
+}
+
+label,
+form a {
+  color: #777;
+}
+
+li a {
+  color: #1c212a;
+  font-size: 1.75em;
+}
+
+label:hover,
+form a:hover,
+li a:hover {
+  color: #a800b3;
+}
+
+form + p span {
+  background: #fafafa;
+  padding: 0 1em;
+  position: relative;
+  z-index: 2;
+}
+
+form + p::after {
+  content: "";
+  display: block;
+  background: #1c212a;
+  height: 1px;
+  width: 100%;
+  transform: translateY(-.6em);
+}
+
+label,
+button {
+  cursor: pointer;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  list-style: none;
+  margin-top: 1em;
 }
 
 .holder {
@@ -20,9 +114,76 @@ body {
 .holder > div {
   flex: 1;
   height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.holder > div > div {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2em;
+}
+
+.holder > div:first-of-type form > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .holder > div:last-of-type {
   background: #a800b3;
   background: linear-gradient(135deg, #262133 0%, #a800b3 100%);
+}
+
+.holder > div:last-of-type a {
+  border: 2px solid #fff;
+  border-radius: 20px;
+  color: #fff;
+  display: inline-block;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 2em;
+  padding: .5em 1.252em;
+}
+
+.holder > div:last-of-type a:hover {
+  background: rgba(0,0,0,.15);
+  box-shadow: 0 0 20px #262133;
+}
+
+.holder > div:last-of-type a i {
+  margin-left: .5em;
+}
+
+.holder > div:last-of-type div {
+  color: #fff;
+}
+
+.holder > div:last-of-type div > i {
+  font-size: 9em;
+}
+
+@keyframes buttonDecor {
+  0% {
+    background: #6B4F9C;
+  }
+  50% {
+    background: #a800b3;
+  }
+  100% {
+    background: #6B4F9C;
+  }
+}
+
+@keyframes buttonDecor {
+  0% {
+    background: #6B4F9C;
+  }
+  50% {
+    background: #a800b3;
+  }
+  100% {
+    background: #6B4F9C;
+  }
 }
