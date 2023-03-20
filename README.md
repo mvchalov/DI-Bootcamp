@@ -5,8 +5,8 @@ Developers Institute Bootcamp. Tech Talent Accelerator
 HTML & CSS
 ### Day 1
 - [Exercises](https://github.com/mvchalov/DI-Bootcamp/tree/main/week01/day1/Exercise)
-- [XP | Create_your_first_HTML_page](https://github.com/mvchalov/DI-Bootcamp/tree/main/week01/day1/XP__create_your_first_HTML_page)
-- [XP Gold | Create_a_landing_page](https://github.com/mvchalov/DI-Bootcamp/tree/main/week01/day1/XP_Gold__Create_a_landing_page)
+- [XP | Create your first HTML page](https://github.com/mvchalov/DI-Bootcamp/tree/main/week01/day1/XP__create_your_first_HTML_page)
+- [XP Gold | Create a landing page](https://github.com/mvchalov/DI-Bootcamp/tree/main/week01/day1/XP_Gold__Create_a_landing_page)
 - [Daily Challenge | Wednesday](https://github.com/mvchalov/DI-Bootcamp/tree/main/week01/day1/Daily_Challenge__Avengers)
 ### Day 2
 - [Exercises](https://github.com/mvchalov/DI-Bootcamp/tree/main/week01/day2/Exercise__Command_Line_and_paths)
