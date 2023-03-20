@@ -1,5 +1,5 @@
 # DI-Bootcamp
-Developers Institute Bootcamp
+Developers Institute Bootcamp. Tech Talent Accelerator
 
 ## Week 01
 HTML & CSS
