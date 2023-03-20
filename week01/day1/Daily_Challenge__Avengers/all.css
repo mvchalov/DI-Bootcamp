@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    transition: all .5s ease;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+    opacity: .7;
+}
+
+body {
+    background: #000;
+    background: linear-gradient(180deg, #000000 0%, #3F2166 100%);
+    color: #fff;
+    min-height: 100vh;
+    font: 16px 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 3em;
+    font-weight: 300;
+    text-align: center;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 3em;
+    background: #6B4F9C;
+    margin: .5em auto 1em;
+}
+
+h3 span {
+    display: block;
+    font-size: .65em;
+    font-weight: 300;
+}
+
+h2 + p {
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+p {
+    margin-top: 1em;
+    line-height: 150%;
+}
+
+header,
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em 4em;
+}
+
+header a {
+    color: #fff;
+}
+
+header > a,
+footer > a:first-of-type {
+    background: url("imgs/logo.png") 0 50% no-repeat;
+    background-size: cover;
+    display: block;
+    width: auto;
+    min-width: 220px;
+    height: 40px;
+}
+
+header > a span,
+footer > a span {
+    display: none;
+}
+
+footer {
+    background: #000;
+}
+
+footer > p {
+    font-size: .85em;
+    opacity: .85;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    margin-left: 1em;
+}
+
+nav li:not(:first-of-type)::before {
+    content: "";
+    border-radius: 2px;
+    height: 4px;
+    width: 4px;
+    background: #6B4F9C;
+    display: inline-block;
+    margin: 0 1em .25em 0;
+}
+
+section:not(:last-of-type) {
+    margin-bottom: 4em;
+}
+
+.promo {
+    background: url("imgs/promo.jpg") 50% 50% no-repeat;
+    background-size: cover;
+}
+
+.promo > div {
+    background: transparent;
+    background: linear-gradient(90deg, rgba(63, 33, 102, .85) 0%, rgba(63, 33, 102, 0.5) 70%);
+    height: 300px;
+    display: flex;
+    align-items: center;
+    padding: 0 4em;
+    max-width: 760px;
+}
+
+.btn {
+    border: 1px solid #fff;
+    display: inline-block;
+    padding: 1em 2em;
+    text-transform: uppercase;
+    border-radius: .5em;
+    margin-top: 2em;
+}
+
+.holder {
+    padding: 4em;
+}
+
+#characters > div {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+#characters aside {
+    min-width: 200px;
+}
+
+#characters aside ul {
+    list-style: none;
+}
+
+#characters aside li:not(:last-of-type) {
+    margin-bottom: 1em;
+}
+
+#characters aside li.active a {
+    color: #6B4F9C;
+}
+
+#characters article {
+    background: rgba(0,0,0,0.35);
+    border: 1px solid #fff;
+    border-radius: .5em;
+    padding: 2em;
+    display: flex;
+    gap: 2em;
+    align-items: center;
+}
+
+#characters article:not(.active) {
+    display: none;
+}
+
+#characters article > div > img {
+    border: 1px solid #3F2166;
+    border-radius: .5em;
+    max-width: 600px;
+    min-width: 300px;
+    width: 100%;
+}
+
+.episodes {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 2em 2em;
+    margin-top: 3em;
+}
+
+.episodes img {
+    margin-bottom: 1em;
+}
+
+#newSeason .twitter-tweet[style] {
+    margin: 2em auto 0!important;
+}
+
+@media (min-width: 768px) {
+    .promo > div {
+        padding-right: 50%;
+        height: 450px;
+    }
+
+}
+
+@media (min-width: 1280px) {
+    .promo > div {
+        background: linear-gradient(90deg, rgba(63, 33, 102, 0.75) 0%, rgba(63, 33, 102, 0) 70%);
+        padding-right: 65%;
+        height: 700px;
+    }
+
+}
