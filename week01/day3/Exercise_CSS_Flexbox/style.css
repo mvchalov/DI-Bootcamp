@@ -1,0 +1,93 @@
+body {
+  font: 21px sans-serif;
+}
+
+.exercise {
+  background-color: #C0F7D7;
+  border: ridge #27C76B;
+  color: #29303b;
+  line-height: 135%;
+  padding: 30px;
+}
+
+.exercise:not(:last-of-type) {
+  margin-bottom: 2em;
+}
+
+.exercise > div {
+  background: #fff;
+  padding: 2em;
+}
+
+.exercise > div > div {
+  border: 2px solid #f00;
+  padding: 6px;
+  display: flex;
+}
+
+.exercise > div > div > div {
+  background: #97d0eb;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+  font-weight: bold;
+}
+
+.exercise1 {
+  flex-flow: column nowrap;
+  align-items: stretch;
+  gap: 1em;
+}
+
+.exercise1 > div:nth-of-type(2) {
+  align-self: center;
+  min-width: 20em;
+  flex-basis: 5em;
+}
+
+.exercise2 {
+  flex-flow: column nowrap;
+  align-items: stretch;
+  gap: 1em;
+}
+
+.exercise2 > div:nth-of-type(2) {
+  align-self: flex-end;
+  min-width: 10em;
+}
+
+.exercise3 {
+  display: flex;
+  flex: 1 0 0
+}
+
+.exercise3 > div {
+  flex-basis: 5em;
+}
+
+.exercise3 > div:first-of-type {
+  background: #919de7
+}
+
+.exercise3 > div:nth-of-type(2) {
+  flex-grow: 2;
+}
+
+.exercise3 > div:last-of-type {
+  background: #e39185;
+  flex-grow: 2;
+}
+
+.exercise4 {
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: .3em;
+}
+
+.exercise4 > div {
+  min-width: 70%;
+}
+
+.exercise4 > div:nth-of-type(2) {
+  min-width: 45%;
+}

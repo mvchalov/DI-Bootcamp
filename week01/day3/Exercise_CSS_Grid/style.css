@@ -1,0 +1,152 @@
+body {
+  font: 21px sans-serif;
+  padding: 2em;
+}
+
+.exercise {
+  background-color: #C0F7D7;
+  border: ridge #27C76B;
+  color: #29303b;
+  line-height: 135%;
+  padding: 30px;
+}
+
+.exercise:not(:last-of-type) {
+  margin-bottom: 4em;
+}
+
+.exercise1 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto;
+  grid-gap: 1.5em
+}
+
+.exercise1 > div {
+  background: #a6c5f4;
+  border: 2px solid #000;
+  padding: 1em;
+}
+
+.exercise1 > div:nth-of-type(odd) {
+  background: #de9d9b;
+}
+
+.exercise1 > div:last-of-type {
+  background: #fce5a2;
+  grid-column: 1/3;
+}
+
+.exercise2 {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 1.5em
+}
+
+.exercise2 > div {
+  background: #a6c5f4;
+  border: 2px solid #000;
+  padding: 1em;
+}
+
+.exercise2 > div:first-of-type {
+  background: #78d3e8;
+  grid-column: 1/8;
+}
+
+.exercise2 > div:nth-of-type(2) {
+  background: #d5cae1;
+  grid-column: 1/4;
+  grid-row: 2/6;
+}
+
+.exercise2 > div:nth-of-type(3) {
+  background: #efc552;
+  grid-column: 4/8;
+  grid-row: 2/9;
+}
+
+.exercise2 > div:nth-of-type(4) {
+  background: #a6c06f;
+  grid-column: 1/4;
+  grid-row: 6/10;
+}
+
+.exercise2 > div:nth-of-type(5) {
+  background: #898989;
+  grid-column: 4/8;
+  grid-row: 9/10;
+}
+
+.exercise2 > div:nth-of-type(6) {
+  background: #5ab379;
+  grid-column: 1/6;
+  grid-row: 10/12;
+}
+
+.exercise2 > div:nth-of-type(7) {
+  background: #edcedd;
+  grid-column: 6/8;
+  grid-row: 10/12;
+}
+
+.exercise2 > div:nth-of-type(8) {
+  background: #f3a83b;
+  grid-column: 1/8;
+  grid-row: 12/13;
+}
+
+.exercise3 {
+  display: grid;
+  grid-template: repeat(5, 1fr) / repeat(3, 1fr);
+  grid-gap: 1em 1em;
+}
+
+.exercise3 > div {
+  border: .1em solid #fff;
+  color: #fff;
+  padding: 1em;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.exercise3 > div:first-of-type {
+  background: #aa3f69;
+  grid-area: 1/1/1/4;
+}
+
+.exercise3 > div:nth-of-type(2) {
+  background: #716fa4;
+  grid-area: 2/1/4/1;
+}
+
+.exercise3 > div:nth-of-type(3) {
+  background: #7885bb;
+  grid-area: 2/2/3/3;
+}
+
+.exercise3 > div:nth-of-type(4) {
+  background: #99cbd2;
+  grid-area: 2/3/3/3;
+}
+
+.exercise3 > div:nth-of-type(5) {
+  background: #bd8cca;
+  grid-area: 3/2/3/4;
+}
+
+.exercise3 > div:nth-of-type(6) {
+  background: #b13468;
+  grid-area: 4/1/4/3;
+}
+
+.exercise3 > div:nth-of-type(7) {
+  background: #6e6ba3;
+  grid-area: 4/3/4/4;
+}
+
+.exercise3 > div:nth-of-type(8) {
+  background: #7987bd;
+  grid-area: 5/1/5/4;
+}
