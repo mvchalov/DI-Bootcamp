@@ -22,16 +22,16 @@ body {
     background: linear-gradient(180deg, #000000 0%, #3F2166 100%);
     color: #fff;
     min-height: 100vh;
-    font: 16px 'Open Sans', sans-serif;
+    font: 12px 'Open Sans', sans-serif;
 }
 
 h1 {
-    font-size: 3em;
+    font-size: 2em;
     font-weight: 300;
 }
 
 h2 {
-    font-size: 3em;
+    font-size: 2em;
     font-weight: 300;
     text-align: center;
 }
@@ -152,7 +152,7 @@ section:not(:last-of-type) {
 }
 
 #characters > div {
-    display: flex;
+    display: flex;    
     align-items: center;
     gap: 2em;
 }
@@ -210,18 +210,86 @@ section:not(:last-of-type) {
     margin: 2em auto 0!important;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 767px) {
+    #characters > div {
+        flex-direction: column-reverse
+    }
+    #characters aside li {
+        text-align: center;
+        font-size: 1.15em
+    }
+}
+
+@media (max-width: 599px) {
+    
+    header {
+        flex-direction: column;        
+    }
+    
+    header,
+    footer {
+        gap: 1.5em
+    }
+    
+    footer,
+    #characters article {
+        flex-direction: column-reverse
+    }
+    .episodes {
+        grid-template-columns: auto;
+        text-align: center
+    }
+}
+
+@media (min-width: 768px) {    
     .promo > div {
-        padding-right: 50%;
+        padding-right: 40%;
         height: 450px;
     }
+}
 
+@media (min-width: 768px) and (max-width: 991px) {
+    #characters > div {
+        flex-direction: column-reverse
+    }
+    #characters aside li {
+        text-align: center;
+        font-size: 1.15em
+    }    
+}
+
+@media (max-width: 991px) {
+    .episodes {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .episodes {
+        grid-template-columns: auto auto auto;
+    }
+}
+
+@media (min-width: 992px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        font-size: 16px;
+    }
+    h1,
+    h2 {
+        font-size: 3em
+    }
 }
 
 @media (min-width: 1280px) {
     .promo > div {
         background: linear-gradient(90deg, rgba(63, 33, 102, 0.75) 0%, rgba(63, 33, 102, 0) 70%);
-        padding-right: 65%;
+        padding-right: 60%;
         height: 700px;
     }
 
