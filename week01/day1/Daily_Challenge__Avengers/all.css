@@ -26,12 +26,12 @@ body {
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 1.75em;
     font-weight: 300;
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 1.75em;
     font-weight: 300;
     text-align: center;
 }
@@ -210,6 +210,12 @@ section:not(:last-of-type) {
     margin: 2em auto 0!important;
 }
 
+@media (max-width: 991px) {
+    .episodes {
+        grid-template-columns: auto auto;
+    }
+}
+
 @media (max-width: 767px) {
     #characters > div {
         flex-direction: column-reverse
@@ -239,6 +245,11 @@ section:not(:last-of-type) {
         grid-template-columns: auto;
         text-align: center
     }
+
+    .promo > div {
+        height: auto;
+        padding: 2em;
+    }
 }
 
 @media (min-width: 768px) {    
@@ -256,12 +267,6 @@ section:not(:last-of-type) {
         text-align: center;
         font-size: 1.15em
     }    
-}
-
-@media (max-width: 991px) {
-    .episodes {
-        grid-template-columns: auto auto;
-    }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
