@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: #69bbb5 url("imgs/bg.svg") 50% 100% no-repeat;
+  background-size: contain;
+  font: 16px/1.5em 'Lato', sans-serif;
+}
+
+.holder {
+  background: rgba(105,187,181,.5);
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  margin: 1em auto 2em;
+}
+
+header {
+  background: #40666c;
+  border-bottom: 1em solid #fff;
+  color: #fff;
+  font-size: .75em;
+  text-transform: uppercase;
+  padding: .5em;
+  text-align: center;
+}
+
+header a {
+  display: inline-block;
+  background: #449fd3;
+  color: #fff;
+  padding: .25em .75em;
+  margin-left: 1em;
+}
+
+header a:hover {
+  background: #000;
+}
+
+section {
+  color: #fff;
+  padding: 4em;
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+          "a b c"
+          "d e f"
+          "g g g"
+          "h h h"
+          "i i i"
+          ". j .";
+  gap: 2em;
+  max-width: 44em;
+  margin: 0 auto;
+}
+
+form > div:first-of-type {
+  grid-area: a;
+}
+
+form > div:nth-of-type(2) {
+  grid-area: b;
+}
+
+form > div:nth-of-type(3) {
+  grid-area: c;
+}
+
+form > div:nth-of-type(4) {
+  grid-area: d;
+}
+
+form > div:nth-of-type(5) {
+  grid-area: e;
+}
+
+form > div:nth-of-type(6) {
+  grid-area: f;
+}
+
+form > div:nth-of-type(7) {
+  grid-area: g;
+}
+
+form > div:nth-of-type(8) {
+  grid-area: h;
+}
+
+form > div:nth-of-type(9) {
+  grid-area: i;
+}
+
+form > div:nth-of-type(10) {
+  grid-area: j;
+}
+
+.fgroup label {
+  display: block;
+  text-transform: uppercase;
+  margin-bottom: .25em;
+}
+
+.fgroup input:not([type="checkbox"]) {
+  width: calc(100% - 1em);
+  padding: .5em;
+}
+
+input[type="checkbox"] {
+  margin-right: .5em;
+}
+
+button {
+  cursor: pointer;
+  display: block;
+  background: #449fd3;
+  color: #fff;
+  border: none;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  padding: 1em 2em;
+  width: auto;
+}
+
+button:hover {
+  background: #000;
+}
+
+.fgroup select {
+  width: 100%;
+  padding: .5em;
+}
+
+@media (max-width: 991px) {
+  form {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+            "a b"
+            "c d"
+            "e f"
+            "g g"
+            "h h"
+            "i i"
+            "j j"
+  }
+}
