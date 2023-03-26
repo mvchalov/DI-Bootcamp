@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2da92cbb-0717-46bb-a24f-58f352754dc2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../PortfolioProject/imgs/bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PortfolioProject/imgs/folio/01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PortfolioProject/imgs/folio/02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PortfolioProject/imgs/folio/03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PortfolioProject/imgs/upic.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PortfolioProject/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PortfolioProject/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week01/day5/DailyChallenge/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week01/day5/Exercise/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week01/day5/Exercise/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/week02.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercises.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week01/day4/XPNinja_Recreate_A_Landing_Page/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../week01/day4/XPNinja_Recreate_A_Landing_Page/index.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2NXgCwkMR617rvKelAToGxOLstc" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/mvchalov/Sync/Play/DI-Bootcamp/week02/day1",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2da92cbb-0717-46bb-a24f-58f352754dc2" name="Changes" comment="" />
+      <created>1679815717081</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1679815717081</updated>
+      <workItem from="1679815718314" duration="29000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Daily Challenge: CSS Animation</title>
+    <style>
+
+      * {
+        margin: 0;
+        padding: 0;
+        transition: all .5s ease;
+      }
+
+      .holder {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 100vh;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+        justify-content: space-around;
+        gap: 3em
+      }
+
+      .grid > div {
+        width: 13em;
+        height: 13em;
+      }
+
+      .grid > div:first-of-type {
+        background: #1a222b;
+        opacity: .5;
+      }
+      .grid > div:first-of-type:hover {
+        opacity: 1;
+      }
+
+      .grid > div:nth-of-type(2) {
+        background: #0c4683;
+      }
+
+      .grid > div:nth-of-type(2):hover {
+        background: #6a0773;
+      }
+
+      .grid > div:nth-of-type(3) {
+        background: #0e6f0a;
+      }
+
+      .grid > div:nth-of-type(3):hover {
+        transform: scale(.75);
+      }
+
+      .grid > div:nth-of-type(4) {
+        background: #c98b13;
+      }
+
+      .grid > div:nth-of-type(4):hover {
+        transform: rotate(.3turn);
+      }
+
+      .grid > div:nth-of-type(5) {
+        background: #c2376d;
+      }
+
+      .grid > div:nth-of-type(5):hover {
+        border-radius: 50%;
+      }
+
+      .grid > div:nth-of-type(6) {
+        background: #401e7a;
+      }
+
+      .grid > div:nth-of-type(6):hover {
+        box-shadow: 0 0 10px #00c4c0;
+      }
+
+      .grid > div:nth-of-type(7) {
+        background: #465c79;
+      }
+
+      .grid > div:nth-of-type(7):hover {
+        animation: crazy 3s ease;
+      }
+
+      .grid > div:nth-of-type(8) {
+        background: #256c5b;
+      }
+
+      .grid > div:nth-of-type(8):hover {
+        box-shadow: inset 3em 1em 5em #3CAFA2;
+      }
+
+      @keyframes crazy {
+        10% {
+          transform: translateX(5px);
+        }
+        20% {
+          transform: translateX(-5px);
+        }
+        30% {
+          transform: translateX(10px);
+        }
+        40% {
+          transform: translateX(-10px);
+        }
+        50% {
+          transform: translateX(5px);
+        }
+        60% {
+          transform: translateX(-5px);
+        }
+        70% {
+          transform: translateX(15px);
+        }
+        80% {
+          transform: translateX(-15px);
+        }
+        90% {
+          transform: translateX(5px);
+        }
+      }
+
+    </style>
+</head>
+<body>
+<div class="holder">
+    <div class="grid">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+</body>
+</html>

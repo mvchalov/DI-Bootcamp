@@ -1,0 +1,19 @@
+header {
+  background: #000 url("imgs/bg.jpg") 50% 50% no-repeat;
+  background-size: cover;
+}
+
+.nav-link {
+  color: #e4d8e8;
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.nav-link:active,
+.nav-link.active {
+  color: #fff;
+}
+
+.portfolio {
+  background: #e4d8e8;
+}
