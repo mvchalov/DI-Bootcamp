@@ -44,10 +44,10 @@ for i in range(1, 21):
 my_name = "Max"
 your_name = ""
 while your_name != my_name:
-    your_name = input("Enter your name: ")
+    your_name = input("Enter your name (until your name is Max): ")
 
 # Exercise 7: Favorite Fruits
-favorite_fruits = input("Enter your favorite fruits: ").split(" ")
+favorite_fruits = input("Enter your favorite fruits (separated by whitespaces): ").split(" ")
 new_fruit = input("Enter the fruit: ")
 if new_fruit in favorite_fruits:
     print("You chose one of your favorite fruits! Enjoy!")
@@ -61,7 +61,7 @@ while pizza_topping != "quit":
     if pizza_topping != "":
         pizza_toppings.append(pizza_topping)
         print(f"You've added {pizza_topping} to your pizza")
-    pizza_topping = input("Enter the topping (type 'quit' to finish): ")
+    pizza_topping = input("Enter the topping one by one separated by Enter (type 'quit' to finish): ")
 print("Your pizza {}costs {}".format("includes " + ", ".join(pizza_toppings)+" and " if len(pizza_toppings) > 0 else "", 10 + len(pizza_toppings) * 2.5))
 
 # Exercise 9: Cinemax
