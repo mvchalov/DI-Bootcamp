@@ -28,7 +28,7 @@ print(sorted(this_set))
 # Exercise 1
 b = []
 a = int(input("Enter a number: "))
-for i in range(1,a+1):
+for i in range(1, a+1):
     b.append(i*a)
 print(b)
 
