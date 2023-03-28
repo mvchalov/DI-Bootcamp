@@ -75,6 +75,21 @@ for e in family_ages:
             ticket_cost += 10
 print(f"The total cost of tickets is {ticket_cost}")
 
+# Exercise 9.4: Teenagers
+teenagers_list = input("Enter the teenagers list separated by comma-whitespace: ").split(", ")
+eligible = {}
+for teenager in teenagers_list:
+    age = int(input(f"Enter the {teenager} age: "))
+    if not 21 >= age >= 16:
+        eligible[teenager] = age
+print(eligible)
+if len(eligible) > 0:
+    print("The eligible teenagers:")
+    for key in eligible.keys():
+        print(key, "has the age of", eligible[key], "and eligible to go")
+else:
+    print("No one is eligible to go")
+
 # Exercise 10 : Sandwich Orders
 sandwich_orders = ["Tuna sandwich", "Avocado sandwich", "Egg sandwich", "Sabih sandwich", "Pastrami sandwich"]
 finished_sandwiches = []
