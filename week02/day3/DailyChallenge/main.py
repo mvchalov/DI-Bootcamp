@@ -55,6 +55,7 @@ indata = [
 def price_correction(price):
     return int(''.join(list(filter(lambda e: e.isdigit(), price))))
 
+
 for test_set in indata:
     current_items = {}
     for key, value in test_set['items_purchase'].items():

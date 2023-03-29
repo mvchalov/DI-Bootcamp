@@ -9,4 +9,3 @@ if functools.reduce(lambda a, e: a + e, divisors, 0) == num:
     print('True')
 else:
     print('False')
-    
