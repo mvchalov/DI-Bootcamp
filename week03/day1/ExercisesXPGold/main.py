@@ -47,7 +47,7 @@ class MyList:
         return sorted(self.letters)
 
     def random_list(self):
-        return [random.randint(0,len(self.letters)) for i in range(len(self.letters))]
+        return [random.randint(0, len(self.letters)) for i in range(len(self.letters))]
 
 
 list_test = MyList('abcdefg')
