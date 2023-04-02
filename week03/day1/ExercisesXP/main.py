@@ -67,7 +67,8 @@ class Zoo:
         self.animals = []
 
     def add_animal(self, new_animal):
-        self.animals.append(new_animal)
+        if not new_animal in self.animals:
+            self.animals.append(new_animal)
 
     def get_animals(self):
         print(self.animals)
@@ -93,7 +94,7 @@ class Zoo:
 
 
 ramat_gan_safari = Zoo("Ramat Gan Safari")
-for i in ["Ape", "Cat", "Baboon", "Bear", "Emu", "Cougar", "Eel"]:
+for i in ["Ape", "Cat", "Baboon", "Bear", "Emu", "Cougar", "Baboon", "Eel"]:
     ramat_gan_safari.add_animal(i)
 ramat_gan_safari.get_animals()
 ramat_gan_safari.get_groups()
