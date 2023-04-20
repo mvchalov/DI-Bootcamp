@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animal Families</title>
+</head>
+<body>
+  <h1>Animal Families</h1>
+  <p>Choose the animal family you'd like to explore</p>
+  {% for item in families %}
+    <a href="/family/{{item.id}}/">{{item.name}}</a>
+  {% endfor %}
+</body>
+</html>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animal {{animal_name}}</title>
+</head>
+<body>
+  <h1>{{animal_name}}</h1>
+  {% for key, value in animals.items %}
+    <p><b>{{key}}:</b> {{value}}</p>
+  {% endfor %}
+</body>
+</html>

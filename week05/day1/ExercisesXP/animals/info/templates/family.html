@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Family {{animal_family}}</title>
+  </head>
+  <body>
+    {% if animals %}
+        <h1>Animals from {{animal_family}}</h1>
+        <table>
+            {% for item in animals %}
+                <tr>
+                    <td colspan="2">
+                        <h2><a href="/animal/{{item.id}}">{{item.name}}</a></h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Family:</td>
+                    <td>{{item.family}}</td>
+                </tr>
+                <tr>
+                    <td>Legs:</td>
+                    <td>{{item.legs}}</td>
+                </tr>
+                <tr>
+                    <td>Weight:</td>
+                    <td>{{item.weight}}</td>
+                </tr>
+                <tr>
+                    <td>Height:</td>
+                    <td>{{item.height}}</td>
+                </tr>
+                <tr>
+                    <td>Speed:</td>
+                    <td>{{item.speed}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <div>This page doesn't have any info yet. Come back later!</div>
+    {% endif %}
+    <table>
+      <tr>
+        <td></td>
+      </tr>
+    </table>
+  </body>
+</html>
