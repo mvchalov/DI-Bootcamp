@@ -10,5 +10,10 @@
   {% for item in families %}
     <a href="/family/{{item.id}}/">{{item.name}}</a>
   {% endfor %}
+  <p>Or you can choose an animal:</p>
+  {% for item in animals %}
+    <a href="/animal/{{item.id}}/">{{item.name}}</a>
+  {% endfor %}
+
 </body>
 </html>

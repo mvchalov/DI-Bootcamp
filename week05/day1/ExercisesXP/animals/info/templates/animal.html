@@ -5,9 +5,15 @@
     <title>Animal {{animal_name}}</title>
 </head>
 <body>
+  {% load static %}
   <h1>{{animal_name}}</h1>
   {% for key, value in animals.items %}
-    <p><b>{{key}}:</b> {{value}}</p>
+    {% if key != 'pic' %}
+        <p><b>{{key}}:</b> {{value}}</p>
+    {% else %}
+
+        <img src="{% static 'imgs/'%}{{value}}" alt="">
+    {% endif %}
   {% endfor %}
 </body>
 </html>

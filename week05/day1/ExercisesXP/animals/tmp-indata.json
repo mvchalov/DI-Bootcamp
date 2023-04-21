@@ -7,7 +7,8 @@
             "weight": 5.67,
             "height":4.2,
             "speed": 34,
-            "family": 2
+            "family": 2,
+            "pic": "dog.webp"
         },
         {
             "id": 2,
@@ -16,7 +17,8 @@
             "weight": 5.67,
             "height":4.2,
             "speed": 34,
-            "family": 1
+            "family": 1,
+            "pic": "fox.webp"
         },
         {
             "id": 3,
@@ -25,7 +27,8 @@
             "weight": 5.67,
             "height":4.2,
             "speed": 34,
-            "family": 1
+            "family": 1,
+            "pic": "dog.webp"
         },
         {
             "id": 4,
@@ -34,7 +37,8 @@
             "weight": 5.67,
             "height":4.2,
             "speed": 34,
-            "family": 3
+            "family": 3,
+            "pic": "fox.webp"
         },
         {
             "id": 5,
@@ -43,7 +47,8 @@
             "weight": 5.67,
             "height":4.2,
             "speed": 34,
-            "family": 3
+            "family": 3,
+            "pic": "dog.webp"
         }
     ],
     "families": [

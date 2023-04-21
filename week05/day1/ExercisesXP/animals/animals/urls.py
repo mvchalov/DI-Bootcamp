@@ -21,6 +21,7 @@ from info.views import family, index, animal
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', index),
     path('index/', index),
     path('family/', index),
     path('family/<int:family_id>/', family),

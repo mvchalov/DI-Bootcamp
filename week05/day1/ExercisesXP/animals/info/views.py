@@ -1,12 +1,13 @@
 from django.shortcuts import render
-from .models import get_animals_by_family, get_animal_by_id, get_family_by_id, get_families
+from .models import get_animals_by_family, get_animal_by_id, get_family_by_id, get_families, get_animals
 
 
 # Create your views here.
 def index(request):
     context = {
         "title": "Animals",
-        "families": get_families()
+        "families": get_families(),
+        "animals": get_animals(),
     }
     return render(request, 'index.html', context)
 
