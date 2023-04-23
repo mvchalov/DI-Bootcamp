@@ -54,23 +54,33 @@
     "families": [
         {
             "id": 1,
-            "name": "Felidae"
+            "name": "Felidae",
+            "pic": "dog.webp",
+            "description": "Lorem Ipsum"
         },
         {
             "id": 2,
-            "name": "Caninae"
+            "name": "Caninae",
+            "pic": "dog.webp",
+            "description": "Lorem Ipsum"
         },
         {
             "id": 3,
-            "name": "Mammals"
+            "name": "Mammals",
+            "pic": "dog.webp",
+            "description": "Lorem Ipsum"
         },
         {
             "id": 4,
-            "name": "Birds"
+            "name": "Birds",
+            "pic": "dog.webp",
+            "description": "Lorem Ipsum"
         },
         {
             "id": 5,
-            "name": "Fish"
+            "name": "Fish",
+            "pic": "dog.webp",
+            "description": "Lorem Ipsum"
         }
     ]
 }

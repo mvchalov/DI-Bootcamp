@@ -1,0 +1,37 @@
+* {
+    transition: all .3s ease
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar-brand svg {
+    width: 96px;
+    height: 74px;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    padding: 2em 0;
+}
+
+footer a {
+    color: #aaa;
+}
+
+footer a:hover,
+footer a:focus,
+footer a:active {
+    color: #fff;
+}
+
+.animal_profile p {
+    padding: 0 1em;
+}
+
+.animal_profile p:nth-of-type(odd) {
+    background: #f4f4f4;
+    padding: 1em;
+}

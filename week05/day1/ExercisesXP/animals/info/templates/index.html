@@ -1,19 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+{% load static %}
 <head>
     <meta charset="UTF-8">
-    <title>Animal Families</title>
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="{% static 'css/'%}bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/'%}all.css">
 </head>
 <body>
-  <h1>Animal Families</h1>
-  <p>Choose the animal family you'd like to explore</p>
-  {% for item in families %}
-    <a href="/family/{{item.id}}/">{{item.name}}</a>
-  {% endfor %}
-  <p>Or you can choose an animal:</p>
-  {% for item in animals %}
-    <a href="/animal/{{item.id}}/">{{item.name}}</a>
-  {% endfor %}
 
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/"><svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="enable-background:new 0 0 97.8 76.9" viewBox="0 0 97.8 76.9"><path d="M88.7 22.4c-.9-.9-1.8-1.7-2.8-2.4l-.8-.6.7-.8c1.7-2.1 2.9-4.2 3.6-6.3.6-1.9.8-3.8.5-5.5-.6-3-2.4-4.7-2.5-4.8l-.8-.7-.9.7c-4.4 3.6-17.4 7.6-18.9 8l-.3.1-.2-.1c-6-1.6-16.9-1.8-17.4-1.8s-11.3.1-17.3 1.8l-.3.1-.3-.1c-1.5-.4-14.5-4.4-18.9-8l-.8-.7-.8.7c-.1.1-1.9 1.8-2.5 4.8-.3 1.8-.2 3.6.5 5.5.7 2 1.9 4.1 3.6 6.3l.7.8-.9.6c-1 .8-1.9 1.6-2.8 2.4C3.9 27.7 1 34.6 1 42c0 7.4 2.9 14.3 8.1 19.6s12.2 8.1 19.6 8.1c2.3 0 5.6-.1 8.6-.5l.6-.1.4.4c2.7 3.3 6.3 5.4 10.6 6.3h.2c4.3-.8 7.9-3 10.6-6.3l.4-.4.6.1c3 .4 6.4.5 8.6.5 7.4 0 14.3-2.9 19.6-8.1C94.1 56.4 97 49.4 97 42s-3-14.3-8.3-19.6zm3.1 15.2c0 10.6-8.6 19.2-19.2 19.2-7.2 0-13.8-4-17.1-10.5l-.4-.7.6-.5c.9-.7 1.8-1.4 2.8-2.2l1.1-.9.5 1.4c1.8 5.4 6.8 9 12.5 9 7.2 0 13.1-5.9 13.1-13.1 0-4.9-2.7-9.3-7-11.6l-1.2-.7 1-1c1.5-1.4 2.8-2.6 3.9-3.8l.6-.6.7.5c5.1 3.6 8.1 9.4 8.1 15.5zM56 51.6l-.2.5c-.6 1.5-2 4.4-4 6.8L50 61.2V49.7l3.1-2.4.6 1c.6 1 1.2 2 2 2.9l.3.4zm17.4-11.4c0 .5-.1.9-.4 1.3-.4.5-1 .9-1.8.9-1.2 0-2.2-1-2.2-2.2s1-2.2 2.2-2.2c1 0 1.9.7 2.1 1.7.1.2.1.3.1.5zm-2.5 6.5c3.6 0 6.5-2.9 6.5-6.5s-2.9-6.5-6.5-6.5c-.4 0-.9 0-1.3.1 1.8-1.6 3.6-3.1 5.2-4.5l.4-.4.5.2c4.4 1.4 7.4 5.5 7.4 10.1 0 5.8-4.8 10.6-10.6 10.6-5.3 0-9.8-3.9-10.5-9.1l-.1-.6.4-.4c.8-.6 1.6-1.3 2.4-2-.3.7-.5 1.5-.5 2.4.2 3.7 3.1 6.6 6.7 6.6zM35.2 11.8c5.6-.9 12.9-1 13.7-1 .8 0 8.2.1 13.7 1l1.6.3-15.3 20.7-15.4-20.7 1.7-.3zM10.5 7.5c.1-.6.3-1.3.5-1.8l.5-1 1 .6c5.4 3.3 15.1 6.3 17.9 7.2l.4.1L48.9 37l18-24.2.3-.3.3-.1c2.8-.9 12.5-3.9 17.9-7.2l1-.6.5 1c.3.6.4 1.2.5 1.8.4 2.9-.9 6.3-3.9 9.8l-.4.4c-.8.9-1.8 2-2.9 3.1l-.5.5c-1.4 1.4-3 2.9-4.8 4.5-4.2 3.8-9.5 8.2-15.7 13.3-1.3 1-2.5 2-3.7 3-1.5 1.2-2.8 2.2-3.9 3.1-.8.6-2.7 2.1-2.7 2.1s-1.9-1.5-2.7-2.1c-1.1-.9-2.4-1.9-3.9-3.1-1.1-.9-2.4-1.9-3.7-3-6.2-5.1-11.5-9.5-15.7-13.3-1.8-1.7-3.5-3.2-4.8-4.5l-.5-.5c-1.1-1.1-2.1-2.2-3-3.1l-.3-.4c-2.9-3.4-4.3-6.8-3.8-9.7zm37.3 42.2v11.5L46 59c-2-2.4-3.4-5.3-4-6.8l-.2-.5.4-.5c.7-.9 1.4-1.9 2-2.9l.6-1 3 2.4zm-23.4-9.5v-.4c.2-1 1.1-1.7 2.1-1.7 1.2 0 2.2 1 2.2 2.2s-1 2.2-2.2 2.2c-.7 0-1.4-.4-1.7-.9-.2-.5-.4-.9-.4-1.4zm2.5-6.5c-3.6 0-6.5 2.9-6.5 6.5s2.9 6.5 6.5 6.5 6.5-2.9 6.5-6.5c0-.8-.2-1.6-.5-2.4.8.7 1.6 1.3 2.4 2l.4.4-.1.6c-.7 5.2-5.2 9.1-10.5 9.1-5.8 0-10.6-4.8-10.6-10.6 0-4.7 3-8.7 7.4-10.1l.5-.2.4.4c1.6 1.4 3.4 2.9 5.2 4.5-.2-.2-.6-.2-1.1-.2zM14.1 22.1l.7-.5.6.6c1.1 1.1 2.5 2.4 3.9 3.8l1 1-1.2.7c-4.3 2.3-7 6.7-7 11.6 0 7.2 5.9 13.1 13.1 13.1 5.7 0 10.7-3.6 12.5-9l.5-1.4 1.1.9c1 .8 3.4 2.7 3.4 2.7l-.4.7c-3.3 6.5-9.8 10.5-17.1 10.5C14.6 56.8 6 48.2 6 37.6c0-6.1 3-11.9 8.1-15.5zm72.8 37.7c-4.8 4.8-11.1 7.4-17.8 7.4-1.5 0-3.9 0-6.2-.3l-1.4-.1.6-1.3c.4-.9.7-1.8.9-2.4l-2.5-.5c-.3 1-1 2.6-2.1 4.2-2.2 3.3-5.4 5.4-9.3 6.3l-.2.1-.2-.1c-3.9-.9-7.1-3.1-9.3-6.3-1.1-1.7-1.8-3.3-2.1-4.2l-2.5.5c.2.6.5 1.4.9 2.4l.6 1.3-1.4.1c-2.3.2-4.7.3-6.2.3-6.7 0-13-2.6-17.8-7.4-2.9-2.9-5.1-6.5-6.3-10.5l1.8-.8c.9 1.6 2.1 3.1 3.4 4.4 4.1 4.1 9.5 6.4 15.3 6.4 5.1 0 9.8-1.7 13.7-4.9l1-.8.6 1.1c1.6 3.2 4.2 7.5 8 9.6l.5.3.5-.3c3.8-2.1 6.5-6.4 8-9.6l.6-1.1 1 .8c3.9 3.2 8.6 4.9 13.7 4.9 5.8 0 11.2-2.3 15.3-6.4 1.3-1.3 2.5-2.8 3.4-4.4l1.8.8c-1.2 4-3.3 7.6-6.3 10.5z"/></svg></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'families' %}">Families</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'animals' %}">Animals</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  </header>
+
+  <div class="container py-5">
+    <div class="row">
+      <div class="col text-center">
+         {% include template_part %}
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col"><a href="{% url 'families' %}">Families</a> | <a href="{% url 'animals' %}">Animals</a></div>
+        <div class="col text-end">This app was created as an exercise at DI TTA</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="{% static 'js/'%}bootstrap.bundle.min.js"></script>
 </body>
 </html>

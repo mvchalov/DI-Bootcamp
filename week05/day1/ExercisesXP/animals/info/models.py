@@ -39,6 +39,7 @@ def get_families():
         get_indata()
     return indata['families']
 
+
 def get_animals():
     if indata is None:
         get_indata()
