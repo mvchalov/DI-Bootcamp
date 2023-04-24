@@ -1,13 +1,14 @@
 from django.shortcuts import render
-from .models import get_animals_by_family, get_animal_by_id, get_family_by_id, get_families, get_animals
+from django.forms.models import model_to_dict
+from .models import Animal, Family
 
 
 # Create your views here.
 def index(request):
     context = {
         "title": "Animals",
-        "families": get_families(),
-        "animals": get_animals(),
+        "families": Family.objects.all(),
+        "animals": Animal.objects.all(),
         "template_part": "inner_index.html"
     }
     return render(request, 'index.html', context)
@@ -15,20 +16,20 @@ def index(request):
 
 def family(request, family_id):
     context = {
-        "title": get_family_by_id(family_id)['name']+" Family",
-        "animal_family": get_family_by_id(family_id)['name']+" Family",
-        "animals": get_animals_by_family(family_id),
+        "title": Family.objects.get(id=family_id).name+" Family",
+        "animal_family": Family.objects.get(id=family_id).name+" Family",
+        "animals": Animal.objects.filter(family__id=family_id),
         "template_part": "inner_family.html"
     }
     return render(request, 'index.html', context)
 
 
 def animal(request, animal_id):
+    current_animal = Animal.objects.get(id=animal_id)
     context = {
-        "title": get_animal_by_id(animal_id)['name'],
-        "animal_name": get_animal_by_id(animal_id)['name'],
-        "animals": get_animal_by_id(animal_id),
-        "family": get_family_by_id(get_animal_by_id(animal_id)['family']),
+        "title": current_animal.name,
+        "animal": model_to_dict(current_animal),
+        "family": current_animal.family,
         "template_part": "inner_animal.html"
     }
     return render(request, 'index.html', context)
@@ -37,7 +38,7 @@ def animal(request, animal_id):
 def families(request):
     context = {
         "title": "Families",
-        "families": get_families(),
+        "families": Family.objects.all(),
         "template_part": "inner_families.html"
     }
     return render(request, 'index.html', context)
@@ -46,7 +47,7 @@ def families(request):
 def animals(request):
     context = {
         "title": "Animals",
-        "animals": get_animals(),
+        "animals": Animal.objects.all(),
         "template_part": "inner_animals.html"
     }
     return render(request, 'index.html', context)

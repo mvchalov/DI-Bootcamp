@@ -1,17 +1,19 @@
 {% load static %}
-<h1>{{animal_name}}</h1>
+<h1>{{animal.name}}</h1>
 <div class="container-fluid py-4 animal_profile">
     <div class="row">
         <div class="col">
-            <img src="{% static 'imgs/'%}{{animals.pic}}" alt="" class="img-fluid">
+            <img src="{% static 'imgs/'%}{{animal.pic}}" alt="" class="img-fluid">
         </div>
         <div class="col text-start">
-            {% for key, value in animals.items %}
-                {% if key != 'pic' %}
-                    {% if key == 'family' %}
-                        <p><a href="{% url 'family' family.id %}"><b>{{key|title}}:</b> {{family.name}}</a></p>
-                    {% else %}
-                        <p><b>{{key|title}}:</b> {{value}}</p>
+            {% for key, value in animal.items %}
+                {% if key != 'name' %}
+                    {% if key != 'pic' %}
+                        {% if key == 'family' %}
+                            <p><a href="{% url 'family' family.id %}"><b>{{key|title}}:</b> {{family.name}} {{family.id}}</a></p>
+                        {% else %}
+                            <p><b>{{ key|title }}:</b> {{ value }}</p>
+                        {% endif %}
                     {% endif %}
                 {% endif %}
             {% endfor %}

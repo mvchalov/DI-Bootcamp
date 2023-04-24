@@ -1,6 +1,22 @@
-import json
-
 from django.db import models
+
+
+class Family(models.Model):
+    # id is created automatically
+    name = models.CharField(max_length=50)
+    pic = models.CharField(max_length=100)
+    description = models.TextField
+
+
+class Animal(models.Model):
+    name = models.CharField(max_length=50)
+    legs = models.IntegerField()
+    weight = models.FloatField()
+    height = models.FloatField()
+    speed = models.FloatField()
+    family = models.ForeignKey(Family, on_delete=models.SET_NULL, null=True)
+    pic = models.CharField(max_length=100)
+
 
 indata = None
 
