@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% if person_info %}
+
+        <h2>{{person_info.name}}</h2>
+        <p>Email: {{person_info.email}} </p>
+        <p>Phone: {{person_info.phone_number}}</p>
+        <p>From: {{person_profile}}</p>
+        <p>Speaks: {{languages}}</p>
+
+    {% else %}
+
+        <p style="background: #e2afaf; padding: 1em">No person found!</p>
+
+    {% endif %}
+
+{% endblock %}
