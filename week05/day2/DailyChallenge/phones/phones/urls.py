@@ -16,9 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from phonebook.views import f_name
+from phonebook.views import f_name, add_person
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("persons/<str:search_value>", f_name)
+    path("persons/<str:search_value>", f_name),
+    path('addperson/', add_person),
 ]
