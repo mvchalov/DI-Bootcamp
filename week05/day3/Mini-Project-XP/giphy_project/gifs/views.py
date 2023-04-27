@@ -1,6 +1,7 @@
 from django.shortcuts import render
-from .forms import GifForm, CategoryForm
+from .forms import GifForm, CategoryForm, LikeForm
 from .models import Gif, Category
+from django.http import HttpResponse
 
 
 def request_form(form, request):
@@ -16,6 +17,11 @@ def request_form(form, request):
         return {}
 
 
+def gifs_with_likes(the_gifs):
+    likes = [LikeForm(initial={'gif': item}) for item in the_gifs]
+    return {'gifs': list(zip(the_gifs, likes))}
+
+
 # Create your views here.
 def add_gif_view(request):
     context = request_form(GifForm, request)
@@ -28,15 +34,25 @@ def add_category_view(request):
 
 
 def gifs(request):
-    context = {'gifs': Gif.objects.all()}
-    return render(request, 'gifs.html', context)
+    if request.method == 'POST':
+        curr_item = Gif.objects.get(id=request.POST.get('form_id'))
+        if request.POST.get('like'):
+            curr_item.likes += 1
+        if request.POST.get('dislike'):
+            curr_item.likes -= 1
+        curr_item.save()
+
+    return render(request, 'gifs.html', gifs_with_likes(Gif.objects.all()))
 
 
 def gifs_by_category(request, category):
-    context = {'gifs': Category.objects.get(name=category.lower()).gifs.all()}
-    return render(request, 'gifs.html', context)
+    return render(request, 'gifs.html', gifs_with_likes(Category.objects.get(name=category.lower()).gifs.all()))
 
 
 def categories(request):
     context = {'categories': Category.objects.all()}
     return render(request, 'categories.html', context)
+
+
+def liked_gifs(request):
+    return render(request, 'gifs.html', gifs_with_likes(Gif.objects.filter(likes__gt=0).order_by('likes')))

@@ -1,9 +1,13 @@
 {% extends 'blank.html' %}
 
 {% block content %}
-
-  {% for gif in gifs %}
+  {% for gif, form in gifs %}
     <img src="{{ gif.url }}" alt="{{ gif.title }}">
+    <form method="POST">
+      {% csrf_token %}
+      <input type="hidden" name="form_id" value="{{ gif.id }}">
+      <div>{{ form.like.label_tag }} {{ form.like }}  {{ form.dislike.label_tag }} {{ form.dislike }} <button type="submit" name="submit" value="Save changes">Update</button></div>
+    </form>
   {% endfor %}
 
 {% endblock %}
