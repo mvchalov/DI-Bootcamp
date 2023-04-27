@@ -1,0 +1,9 @@
+{% extends 'blank.html' %}
+
+{% block content %}
+<ul>
+  {% for item in categories %}
+    <li><a href="{% url 'cat' item.name %}">{{item.name|title}}</a></li>
+  {% endfor %}
+</ul>
+{% endblock %}

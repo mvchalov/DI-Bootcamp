@@ -1,0 +1,9 @@
+{% extends 'blank.html' %}
+
+{% block content %}
+
+  {% for gif in gifs %}
+    <img src="{{ gif.url }}" alt="{{ gif.title }}">
+  {% endfor %}
+
+{% endblock %}
