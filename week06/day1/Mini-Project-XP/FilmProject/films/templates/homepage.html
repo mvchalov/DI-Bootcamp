@@ -1,0 +1,35 @@
+{% extends 'partials/base.html' %}
+
+{% block content %}
+
+<div class="container py-4">
+    <div class="row">
+        <div class="col">
+            <h1>All the new films</h1>
+            <p>As of {{ current_date }}</p>
+        </div>
+    </div>
+    <div class="row row-cols-3">
+        {% for item in films %}
+            <div class="col">
+                <div class="card my-2">
+                    <div class="card-body">
+                        <h2>{{item.title}}</h2>
+                        <p>Released on {{item.release_date|date:"F d, Y"}}</p>
+                        <p>By {{item.director.all|join:", "}}
+                            <br>Category: {{item.category.all|join:", "}}
+                            <br>Country: {{item.created_in_country}}</p>
+                        <hr>
+                        <p><a href="{% url 'edit_film' item.id %}" class="btn btn-primary">Edit a film</a></p>
+                        {% for d in item.director.all %}
+                            <p><a href="{% url 'edit_director' d.id %}" class="btn btn-secondary">Edit {{d}}</a></p>
+                        {% endfor %}
+                    </div>
+                </div>
+
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

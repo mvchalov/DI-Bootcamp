@@ -1,0 +1,15 @@
+body {
+    background-color: #E0E0E0;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 0.9em;
+    text-align: justify;
+    color: #474747;
+}
+
+h1 {
+    color : blue
+}
+
+ul > li {
+    color: red;
+}

@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse
 from .models import Person, Profile
 from .forms import PersonForm
 
@@ -41,12 +41,15 @@ def request_form(form, request):
         return {'form': curr_form}
     elif request.method == 'POST':
         curr_form = form(request.POST)
+        print(curr_form.is_valid())
         if curr_form.is_valid():
             new_item = curr_form.save()
             new_profile = Profile()
             new_profile.person = new_item
             new_profile.save()
-        return {'form': curr_form}
+            search_name = new_item.name
+            print(search_name)
+            return redirect('phonebook:f_name', search_value=search_name)
     else:
         return {}
 
