@@ -1,0 +1,35 @@
+{% extends 'parts/base.html' %}
+{% block content %}
+<div class="container py-4">
+    <div class="row">
+        <div class="col">
+            <h1>{{ title }}</h1>
+            <p>{{ current_date }}</p>
+        </div>
+    </div>
+    <div class="row row-cols-3">
+        {% for item in todos %}
+            <div class="col">
+                    <div class="card my-2">
+                        <div class="card-body">
+                            <h2>{{item.title}}</h2>
+                            <p>{{item.details}}</p>
+                            <p>Created on {{item.date_creation|date:"F d, Y"}}</p>
+                            {% if date_deadline %}
+                                <p>Deadline: {{item.date_deadline|date:"F d, Y"}}</p>
+                            {% endif %}
+                            {% if has_been_done %}
+                                <p>Completed on {{item.date_completion|date:"F d, Y"}}</p>
+                            {% endif %}
+                            <hr>
+                            <a href="#">{{item.category}}</a>
+                            <hr>
+                            <a href="" class="btn btn-primary">Complete</a>
+                            <a href="" class="btn btn-secondary">Edit</a>
+                        </div>
+                    </div>
+                </div>
+        {% endfor %}
+   </div>
+</div>
+{% endblock %}

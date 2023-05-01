@@ -1,0 +1,17 @@
+{% extends 'parts/base.html' %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="row">
+        <div class="col">
+            <h1>Add a {{ instance }}</h1>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_div }}
+                <button type="submit" class="btn btn-primary mt-4">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
