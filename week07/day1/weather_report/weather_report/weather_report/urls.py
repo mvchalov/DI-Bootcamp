@@ -16,10 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from weatherapp.views import ReportView
+from weatherapp.views import ReportMixinView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
-    path('api/posts/', ReportView.as_view(), name='post-list'),
+    path('api/posts/', ReportMixinView.as_view(), name='post-list'),
 ]

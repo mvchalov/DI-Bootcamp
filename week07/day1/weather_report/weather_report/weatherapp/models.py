@@ -12,7 +12,15 @@ TYPE_CHOICES = (
 
 
 class Report(models.Model):
-    location = models.CharField(max_length=100, null=False, blank=False),
-    temperature = models.FloatField(default=-273, null=False, blank=False),
-    created_at = models.DateTimeField(),
+    location = models.CharField(max_length=100, default='')
+    temperature = models.FloatField(default=-273)
+    created_at = models.DateField(auto_now=True)
     type = models.CharField(max_length=2, choices=TYPE_CHOICES, default='su')
+
+
+    def __str__(self):
+        return f'{self.location}: {self.temperature} deg. C ({self.type})'
+
+
+class Reporter(models.Model):
+    pass
