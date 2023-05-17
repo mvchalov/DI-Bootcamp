@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;700&display=swap');
+
+* {
+  transition: all .3s ease;
+}
+
+body {
+  padding: 1.5em;
+  font: 14px/135% 'Instrument Sans', sans-serif;
+}
+
+button {
+  border: 1px solid #174372;
+  border-radius: 0;
+  background: #174372;
+  color: #fff;
+  font-size: 1.25em;
+  margin: .5em 0;
+  padding: .5em 1em;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #fff;
+  color: #174372;
+}
+
+h2 {
+  color: #174372;
+  margin-top: 0;
+}
+
+.container {
+  border: 1px solid #174372;
+  padding: 1em;
+  margin-top: 2em;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+a {
+  display: inline-block;
+  border: 1px solid #174372;
+  color: #174372;
+  text-decoration: none;
+}
+
+a:hover {
+  background: #174372;
+  color: #fff;
+}
+
+a,
+input {
+  padding: .25em .5em;
+}
