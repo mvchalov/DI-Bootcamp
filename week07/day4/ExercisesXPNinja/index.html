@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        td {
+          width: 4em;
+          text-align: center;
+          padding: 1em 0;
+          border: 1px solid #ccc;
+        }
+        tbody tr:nth-of-type(even) td {
+          background: #f4f4f4;
+        }
+        table {
+          border-collapse: collapse;
+        }
+        thead td {
+          background: #000;
+          color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="calendar"></div>
+
+    <script>
+        function createCalendar(year, month) {
+            const days = ['SU', 'MO', 'TU', 'WE', 'TH', 'FR', 'SA'];
+            const weekDay = (new Date(year, month-1, 1)).getDay();
+            const calendar = document.createElement("table");
+            const thead = document.createElement("thead");
+            let currTr = document.createElement("tr");
+            for (let i=0; i<7; i++) {
+                let head_element = document.createElement("td");
+                head_element.innerHTML = days[i];
+                currTr.appendChild(head_element)
+            }
+            thead.appendChild(currTr);
+            calendar.appendChild(thead);
+            const calendarBody = document.createElement("tbody");
+            calendar.appendChild(calendarBody);
+            currTr = document.createElement("tr");
+            console.log(weekDay, (new Date(year, month, 0).getDate()));
+            for (let i=0; i<(new Date(year, month-1, 0).getDate() + weekDay); i++) {
+                const currTd = document.createElement("td");
+                if (i < weekDay) {
+                    currTd.innerHTML = "."
+                }
+                else {
+                    currTd.innerHTML = (i - weekDay + 1).toString();
+                }
+                currTr.appendChild(currTd);
+                if (((i+1)%7===0)||(i==(new Date(year, month, 0).getDate() + weekDay - 1))) {
+                    calendarBody.appendChild(currTr);
+                    currTr = document.createElement("tr");
+                }
+            }
+            document.querySelector(".calendar").appendChild(calendar);
+        }
+
+        createCalendar(2012, 9)
+    </script>
+</body>
+</html>
