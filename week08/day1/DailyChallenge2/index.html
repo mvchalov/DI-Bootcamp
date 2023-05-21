@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Daily Challenge : Letters</title>
+</head>
+<body>
+  <script>
+    const inputForm = document.createElement("form");
+    inputForm.innerHTML = "<input type='text'>"
+    document.body.appendChild(inputForm);
+
+    document.querySelector("input").addEventListener("input", (e)=>{
+      e.preventDefault();
+      e.target.value = e.target.value.split``.map(e=>(e.match(/[a-zA-Z]/g))?e:'').join``
+    })
+  </script>
+
+</body>
+</html>
