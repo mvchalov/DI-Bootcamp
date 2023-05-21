@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    p {
+      background: yellow;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div id="container"></div>
+  <button id="clear">Clear Interval</button>
+  <script>
+
+    function addParagraph() {
+      document.querySelector("#container").innerHTML += `<p>Hello World!</p>`;
+    }
+
+    setTimeout(()=>{
+      alert("Hello World");
+      addParagraph();
+      const iId = setInterval(()=>{
+        if(document.querySelectorAll("#container p").length < 5) {
+          addParagraph();
+        }
+        else {
+          clearInterval(iId);
+        }
+      }, 2000);
+      document.querySelector("#clear").addEventListener("click", (e)=>{
+        clearInterval(iId);
+      })
+    }, 2000);
+
+  </script>
+</body>
+</html>
