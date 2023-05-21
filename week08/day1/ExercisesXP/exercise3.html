@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 3</title>
+</head>
+<body>
+  <p><strong>Hello</strong> I hope you are enjoying <strong>this</strong> class.<br>At the <strong>end</strong> you <strong>will</strong> be great Developers!<br><strong>Enjoy</strong> the <strong>JavaScript </strong> lessons.</p>
+  <script>
+    let allBoldItems;
+    
+    function getBold_items() {
+      allBoldItems = document.querySelectorAll("p strong");
+      console.log(allBoldItems)
+    }
+
+    function highlight() {
+      allBoldItems.forEach(e=>{
+        e.style.color = "blue";
+      })
+    }
+
+    function return_normal() {
+      allBoldItems.forEach(e=>{
+        e.style.color = "black";
+      })
+    }
+
+    getBold_items();
+
+    document.querySelector("p").addEventListener("mouseover", highlight);
+    document.querySelector("p").addEventListener("mouseout", return_normal);
+    
+  </script>
+</body>
+</html>

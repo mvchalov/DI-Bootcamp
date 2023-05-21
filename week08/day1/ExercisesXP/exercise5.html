@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 5</title>
+    <style>
+      div {
+        border: 1px solid #ccc;
+        background: rgba(61, 22, 173, 0.2);
+        padding: 1em;
+        margin: 2em;
+      }
+    </style>
+</head>
+<body>
+  <script>
+    document.body.appendChild(document.createElement("div"));
+    const demoItem = document.querySelector("div");
+    demoItem.innerHTML = "Event Listener Demo";
+    demoItem.addEventListener("click", (e)=>{
+      if (e.detail == 1) {
+        e.target.innerHTML += " clicked";
+        e.target.style.color = "#3d16ad";
+      }
+    });
+    demoItem.addEventListener("mouseover", (e)=>{
+      e.target.style.fontWeight = "bold";
+    });
+    demoItem.addEventListener("mouseout", (e)=>{
+      e.target.style.fontWeight = "normal";
+    })
+    demoItem.addEventListener("dblclick", (e)=>{
+      const currMargin = e.target.style.margin;
+      e.target.innerHTML = "Event Listener Demo";
+      e.target.style.color = "#000";
+      console.log(currMargin);
+      if (currMargin != "4em") {
+        e.target.style.margin = "4em";
+      }
+      else {
+        e.target.style.margin = "2em";
+      }
+    });
+
+  </script>
+</body>
+</html>

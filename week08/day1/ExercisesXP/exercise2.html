@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 2</title>
+</head>
+<body>
+  <form>
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname"><br><br>
+    <input type="submit" value="Submit" id="submit">
+  </form>
+  <ul class="usersAnswer"></ul>
+  <script>
+    console.log(document.querySelector("form"));
+
+    const inputsById = ["fname", "lname"]
+    inputsById.forEach(e=>{
+      console.log(document.getElementById(e))
+    });
+
+    inputsById.forEach(e=>{
+      console.log(document.querySelector("input[name='"+e+"'"));
+    });
+
+    document.querySelector("form").addEventListener("submit", (event)=>{
+      event.preventDefault();
+      const values = [];
+      let flag = true;
+      event.target.querySelectorAll("input[type='text']").forEach(e=>{
+        if (e.value != "") {
+          values.push(e)
+        }
+        else {
+          flag = false;
+        }
+      });
+      if (flag) {
+        values.forEach(e=>{
+          document.querySelector(".usersAnswer").appendChild(document.createElement("li"));
+          document.querySelector(".usersAnswer").lastElementChild.innerHTML = e.value;
+        })
+      }
+    })
+
+  </script>
+</body>
+</html>
