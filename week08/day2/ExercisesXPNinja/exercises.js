@@ -59,3 +59,17 @@ console.log(reverseArray([]))
 console.log(reverseArray([1,2]))
 console.log(reverseArray([1,2,3,4,5,6,7,8,9,10]))
 
+
+// Exercise 1 : Merge Words
+
+const infiniteCurry = fn => {
+    const next = (...args) => {
+        return x => (!x)?args.reduce((acc, a) => fn.call(fn, acc, a), ''):next(...args, x);
+    };
+    return next();
+};
+
+const mergeWords = infiniteCurry((x, y) => ([x,y].join` `).trim());
+
+console.log(mergeWords('There')('is')('no')('spoon.')());
+console.log(mergeWords('Tell')('me')('a')('story')('I')('never')('heard')('before.')());
