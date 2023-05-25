@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mini Project : Coloring Game</title>
+    <style>
+        * {
+          transition: all .3s ease;
+        }
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+        }
+        body {
+          font-size: 14px;
+          height: 100vh;
+          overflow: hidden;
+        }
+        .containerGame {
+          display: flex;
+        }
+        .containerGame button {
+          display: block;
+          border: none;
+          border-radius: 0;
+          background: #3c3ef2 linear-gradient(45deg, #3b3fe9, #6e3d92);
+          color: #fff;
+          text-align: center;
+          text-transform: uppercase;
+          padding: .5em;
+          width: 100%;
+          cursor: pointer;
+        }
+        .containerGame button:hover {
+          opacity: .75;
+        }
+        .containerGame > div:first-of-type > div {
+          background: #f4f4f4;
+          display: grid;
+          gap: .5em;
+          grid-template-columns: 1fr 1fr 1fr;
+          padding: .5em;
+        }
+        .containerGame > div:first-of-type > div > div {
+          width: 4em;
+          height: 4em;
+          cursor: pointer;
+          border: 1px solid transparent;
+          opacity: .75;
+        }
+        .containerGame > div:first-of-type > div > div:hover {
+          border-color: rgba(0,0,0,.5);
+        }
+        .containerGame > div:first-of-type > div > div.active {
+          box-shadow: 0 0 3em rgba(0,0,0,.75);
+          border-color: #fff;
+          opacity: 1;
+          z-index: 2;
+        }
+        .containerGame > div:last-of-type {
+          display: flex;
+          flex-wrap: wrap;
+        }
+        .containerGame > div:last-of-type > div {
+          width: 1.25em;
+          height: 1.25em;
+          border: 1px solid #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <div class="containerGame"></div>
+    <script src="all.js"></script>
+</body>
+</html>
